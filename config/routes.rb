@@ -13,4 +13,6 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_photo/:da_id", { :controller => "pictures", :action => "destroy_row" })
+
+  mount WebGit::Engine, at: "/rails/git"
 end
